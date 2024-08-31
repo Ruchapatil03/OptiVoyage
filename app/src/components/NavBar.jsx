@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { useAuth } from '../authContext'; // Adjust the import path as needed
 
 export const links = [
+  { title: 'Home', url: '/' },
   { title: 'Register Vessel', url: '/register-vessel' },
   { title: 'Start Navigation', url: '/start-navigation' },
   { title: 'Support', url: '/support' },
