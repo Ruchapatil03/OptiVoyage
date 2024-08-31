@@ -42,7 +42,7 @@ export default function NavBar() {
               </svg>
             </label>
           </div>
-          <div className="mx-2 flex-1 font-bold text-4xl px-2">VIPIO⚓</div>
+          <div className="mx-2 flex-1 font-bold text-4xl px-2">OptiVoyage⚓</div>
           <div className="hidden flex-none lg:block">
             {user ? (
               <ul className="menu menu-horizontal">
@@ -60,8 +60,8 @@ export default function NavBar() {
           <div className="flex-none lg:flex items-center ml-auto">
             {user ? (
               <span className="text-md font-semibold mx-2">
-                  Hello, {user.displayName || 'User'}
-                </span>
+                Hello, {user.displayName || 'User'}
+              </span>
             ) : <></>}
             {user && (
               <button
