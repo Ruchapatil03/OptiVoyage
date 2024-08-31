@@ -44,28 +44,28 @@ const Assessment = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold text-teal-900 mb-4">Previous Journeys</h1>
+      <h1 className="text-2xl font-bold text-teal-900 mb-8 ml-3">Previous Journeys</h1>
       <div className="space-y-4">
         {tripData.map((m, index) => {
           const { src, dest, intermediateCities, totalTime } = m;
           return (
             <div key={index} className="grid grid-rows-2 grid-cols-1 gap-4">
-              <div className="flex">
-                <div className="flex-1 bg-teal-700 p-4 text-center">
+              <div className="flex gap-x-32">
+                <div className="ml-28 w-10 flex-1 bg-teal-700 p-4 text-center rounded-xl">
                   <div className="flex flex-col items-center justify-center h-full">
                     <h3 className="text-lg font-semibold text-teal-300">Source</h3>
-                    <h2 className="text-2xl font-bold text-teal-100">{src}</h2>
+                    <h2 className="text-xl font-bold text-teal-100">{src}</h2>
                   </div>
                 </div>
-                <div className="flex-1 bg-teal-800 p-4 text-center">
+                <div className="mr-28 flex-1 bg-teal-800 p-4 text-center rounded-xl">
                   <div className="flex flex-col items-center justify-center h-full">
                     <h3 className="text-lg font-semibold text-teal-300">Destination</h3>
-                    <h2 className="text-2xl font-bold text-teal-100">{dest}</h2>
+                    <h2 className="text-xl font-bold text-teal-100">{dest}</h2>
                   </div>
                 </div>
               </div>
               <div className="flex justify-center">
-                <button 
+                <button
                   className="btn bg-teal-900 text-white hover:bg-teal-800"
                   onClick={() => handleMoreInfo(m)}>
                   More Info

@@ -28,7 +28,7 @@ export default function RegForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="space-y-12 flex flex-col items-center">
-        <div className="border-b border-gray-900/10 pb-12 text-center text-lg">
+        <div className="border-b border-gray-900/10 text-center text-lg p-8 pb-7 bg-[#EBF5FB]/50 mt-10 mb-10 rounded-2xl">
           <h2 className="font-semibold leading-7 text-gray-900">Vessel Registration Details</h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">Please provide accurate information about the vessel and its ownership for registration purposes.</p>
 
@@ -155,17 +155,17 @@ export default function RegForm() {
               </div>
             </div>
           </div>
-        </div>
-        <div style={{marginTop:"-4vh"}}>
-          <button
-            type="submit"
-            className="inline-flex justify-center rounded-md bg-teal-600 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2"
-          >
-            Submit
-          </button>
+          <div style={{ marginTop: "4vh" }}>
+            <button
+              type="submit"
+              className="inline-flex justify-center rounded-md bg-teal-600 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2"
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
-     
+
     </form>
   );
 }

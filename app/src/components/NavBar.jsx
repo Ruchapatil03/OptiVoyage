@@ -1,11 +1,11 @@
 // src/components/NavBar.jsx
 
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../authContext'; // Adjust the import path as needed
 
 export const links = [
-  { title: 'Home', url: '/' },
+  // { title: 'Home', url: '/' },
   { title: 'Register Vessel', url: '/register-vessel' },
   { title: 'Start Navigation', url: '/start-navigation' },
   { title: 'Support', url: '/support' },
@@ -24,8 +24,8 @@ export default function NavBar() {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className={`navbar w-full ${isHomePage ? 'bg-transparent' : 'bg-transparent'}`}>
-          <div className="flex-none lg:hidden">
+        <div className={`navbar w-full ${isHomePage ? 'bg-transparent' : 'bg-transparent'}  justify-between`}>
+          <div className="flex-none lg:hidden ">
             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,9 @@ export default function NavBar() {
               </svg>
             </label>
           </div>
-          <div className="mx-2 flex-1 font-bold text-4xl px-2">OptiVoyage⚓</div>
+          <Link to="/">
+            <div className="mx-2 flex-1 font-bold text-4xl px-2" >OptiVoyage⚓</div>
+          </Link>
           <div className="hidden flex-none lg:block">
             {user ? (
               <ul className="menu menu-horizontal">
@@ -57,7 +59,7 @@ export default function NavBar() {
             )}
           </div>
           {/* Logout button and User profile picture */}
-          <div className="flex-none lg:flex items-center ml-auto">
+          <div className="flex-none lg:flex items-center">
             {user ? (
               <span className="text-md font-semibold mx-2">
                 Hello, {user.displayName || 'User'}

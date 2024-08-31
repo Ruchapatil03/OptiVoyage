@@ -1,13 +1,13 @@
-import LoginForm from "../components/LoginForm"
+import StartNavigation from "../components/StartNavigation"
 import NavBar from "../components/NavBar"
 export default function Navigation() {
 
-    return(
+    return (
         <div className="hero-container min-h-screen flex flex-col ">
-        <NavBar/>
-        <LoginForm/>
+            <NavBar />
+            <StartNavigation />
 
-        
-    </div>)
-    
+
+        </div>)
+
 }

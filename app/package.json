@@ -16,11 +16,13 @@
     "firebase": "^10.13.1",
     "flowbite": "^2.5.1",
     "flowbite-react": "^0.10.1",
+    "leaflet": "^1.9.4",
     "lottie-react": "^2.4.0",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
     "react-firebase-hooks": "^5.1.1",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.26.1"
   },
   "devDependencies": {

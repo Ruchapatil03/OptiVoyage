@@ -1,19 +1,22 @@
 import { useLocation } from "react-router-dom"
 import NavBar from "../components/NavBar";
+import MapWithRoute from "../components/MapWithRoute";
+
 export default function StartNavigationForVessel() {
-    const location = useLocation();
+  const location = useLocation();
   const { registration_number, vessel_name } = location.state || {}; // Default to {} if no state is provided
-  
-    return(
 
-        <div className="hero-container min-h-screen flex flex-col ">
-        <NavBar/>
+  return (
 
-        
-        
-        </div>
-    
-   
-    )
-    
+    <div className="hero-container min-h-screen flex flex-col ">
+      <NavBar />
+
+      <MapWithRoute />
+
+
+    </div>
+
+
+  )
+
 }
