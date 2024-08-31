@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import Lottie from 'lottie-react'
+import ship from '../assets/ship.json'
 
 export default function LoginForm() {
   const [registrationNumber, setRegistrationNumber] = useState('');
@@ -22,11 +24,12 @@ export default function LoginForm() {
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
+          {/* <img
             alt="Your Company"
             src="/ship.png"
             className="mx-auto h-12 w-auto"
-          />
+          /> */}
+           <Lottie animationData={ship} className='mx-auto h-[130px] w-[130px]'/>
           <h2 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
             Sign in to Start Navigation
           </h2>
@@ -46,7 +49,7 @@ export default function LoginForm() {
                   required
                   value={registrationNumber}
                   onChange={(e) => setRegistrationNumber(e.target.value)}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -65,7 +68,7 @@ export default function LoginForm() {
                   required
                   value={vesselName}
                   onChange={(e) => setVesselName(e.target.value)}
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-teal-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -73,7 +76,7 @@ export default function LoginForm() {
             <div>
               <button
                 onClick={onSignIn}
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-teal-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
               >
                 Sign in
               </button>
@@ -82,7 +85,7 @@ export default function LoginForm() {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Not registered your vessel yet?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            <a href="#" className="font-semibold leading-6 text-teal-600 hover:text-teal-500">
               Get Started Now
             </a>
           </p>
