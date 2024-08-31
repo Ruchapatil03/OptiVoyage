@@ -58,6 +58,11 @@ export default function NavBar() {
           </div>
           {/* Logout button and User profile picture */}
           <div className="flex-none lg:flex items-center ml-auto">
+            {user ? (
+              <span className="text-md font-semibold mx-2">
+                  Hello, {user.displayName || 'User'}
+                </span>
+            ) : <></>}
             {user && (
               <button
                 onClick={logout}
@@ -66,11 +71,6 @@ export default function NavBar() {
                 Logout
               </button>
             )}
-            {user ? (
-              <span className="text-md font-semibold">
-                  Hello, {user.displayName || 'User'}
-                </span>
-            ) : <></>}
           </div>
         </div>
         {/* Page content here */}
