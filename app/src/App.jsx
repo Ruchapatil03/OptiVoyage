@@ -5,6 +5,8 @@ import Navigation from './pages/Navigation'
 import NavBar from './components/NavBar'
 import RegisterVehicle from './pages/RegisterVessel'
 import StartNavigationForVessel from './pages/StartNavigationForVessel'
+import Details from './pages/details'
+import ShowReport from './pages/report'
 
 function App() {
   
@@ -17,6 +19,8 @@ function App() {
       <Route path='/register-vessel' element={<RegisterVehicle/>}/>
       <Route path='/start-navigation' element={<Navigation/>}/>
       <Route path='/start-navigation-for-vessel' element={<StartNavigationForVessel/>}/>
+      <Route path='/vessel-assessment-reports' element={<ShowReport/>}/>
+      <Route path='/details' element={<Details/>}/>
     </Routes>
    </Router>
   )
