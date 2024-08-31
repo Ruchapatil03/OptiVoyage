@@ -12,7 +12,7 @@ Vessel Performance Optimization | Fuel efficiency, safety, and speed: all in one
 **Problem Statement: 1658** - Development of a versatile and fast algorithm for optimal ship routing.  
 **Theme:** Transportation & Logistics  
 
-VIPIO aims to optimize vessel performance by improving fuel efficiency, ensuring safety, and maintaining speed. This project focuses on developing a robust and versatile algorithm for optimal ship routing.
+OptiVoyage aims to optimize vessel performance by improving fuel efficiency, ensuring safety, and maintaining speed. This project focuses on developing a robust and versatile algorithm for optimal ship routing.
 
 
 ## Features ⭐
@@ -23,7 +23,7 @@ VIPIO aims to optimize vessel performance by improving fuel efficiency, ensuring
 
 3. **Speed Optimization:** Balances vessel speed with fuel efficiency to achieve optimal performance. The algorithm dynamically adjusts the vessel's speed based on current conditions and route efficiency, ensuring timely arrivals while minimizing fuel consumption.
 
-4. **Versatility:** Adapts to different types of vessels and a wide range of ocean conditions. Whether it's a cargo ship, tanker, or recreational boat, VIPIO can tailor its recommendations to the specific characteristics and requirements of each vessel.
+4. **Versatility:** Adapts to different types of vessels and a wide range of ocean conditions. Whether it's a cargo ship, tanker, or recreational boat, OptiVoyage can tailor its recommendations to the specific characteristics and requirements of each vessel.
 
 5. **User-Friendly System:** Features an intuitive interface designed for ease of use. Users can easily input parameters, view recommendations, and monitor vessel performance without needing advanced technical knowledge.
 
