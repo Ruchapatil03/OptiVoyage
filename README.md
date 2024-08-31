@@ -37,6 +37,7 @@ VIPIO aims to optimize vessel performance by improving fuel efficiency, ensuring
 
 
 ## Solution Architecture 🖥️
+![image](https://github.com/user-attachments/assets/5509fbeb-e69d-4449-b550-a46b3282f6be)
 
 
 ## Developer Setup ⚙️
