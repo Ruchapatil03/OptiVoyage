@@ -1,6 +1,6 @@
 <div align="center">
 
-# VIPIO⚓  
+# OptiVoyage⚓  
 Vessel Performance Optimization | Fuel efficiency, safety, and speed: all in one.
 
 </div>
