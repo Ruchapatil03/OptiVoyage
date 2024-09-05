@@ -10,14 +10,21 @@ options.add_experimental_option("detach", True)
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-driver.get("https://las.incois.gov.in/las/InteractiveDownloadData.html?dsID=id-483da53532&varID=wind_speed_AW-id-483da53532&initXLo=0.125&initXHi=359.88&initYLo=-89.875&initYHi=89.88&lasxmldoc=%3C%3Fxml+version%3D%221.0%22%3F%3E%3ClasRequest+href%3D%22file%3Alas.xml%22%3E%3Cargs%3E%3Clink+match%3D%22%2Flasdata%2Fdatasets%2Fid-483da53532%2Fvariables%2Fwind_speed_AW-id-483da53532%22+%2F%3E%3Cregion%3E%3Crange+type%3D%22x%22+low%3D%220.125%22+high%3D%22359.88%22+%2F%3E%3Crange+type%3D%22y%22+low%3D%22-89.875%22+high%3D%2289.88%22+%2F%3E%3Cpoint+type%3D%22t%22+v%3D%2215-Jul-2012+00%3A00%22+%2F%3E%3C%2Fregion%3E%3C%2Fargs%3E%3Clink+match%3D%22%2Flasdata%2Foperations%2Foperation%5B%40ID%3D%5C%27Interactive_Download%5C%27%5D%22+%2F%3E%3Cproperties%3E%3Cferret%3E%3Cview%3Exy%3C%2Fview%3E%3Csize%3E.8333%3C%2Fsize%3E%3Cimage_format%3Egif%3C%2Fimage_format%3E%3Cannotations%3Efile%3C%2Fannotations%3E%3C%2Fferret%3E%3Clas%3E%3Coutput_type%3Ehtml%3C%2Foutput_type%3E%3Cdebug%3Efalse%3C%2Fdebug%3E%3C%2Flas%3E%3Cproduct_server%3E%3Cversion%3E8.4%3C%2Fversion%3E%3C%2Fproduct_server%3E%3C%2Fproperties%3E%3C%2FlasRequest%3E")
-# driver.maximize_window()
+driver.get("https://las.incois.gov.in/las/UI.vm#panelHeaderHidden=false;differences=false;autoContour=false;xCATID=9A02C9BF8C98DC3B8055364271BF60E4;xDSID=id-1174b2adc6;varid=PCO2-id-1174b2adc6;imageSize=auto;over=xy;compute=Nonetoken;tlo=15-Jan-2015%2000:00;thi=15-Jan-2015%2000:00;catid=9A02C9BF8C98DC3B8055364271BF60E4;dsid=id-1174b2adc6;varid=PCO2-id-1174b2adc6;avarcount=0;xlo=76;xhi=100;ylo=5;yhi=24;operation_id=Plot_2D_XY_zoom;view=xy")
+
+# select the data to be downloaded
+dataset = driver.find_element("xpath", '//div[@role="button"]')
+dataset.click()
+
+# wind speed
+windspeed = driver.find_element("xpath", '//div[@id="gwt-uid-104"]')
+windspeed.click()
 
 # select the format of saving data
 format = Select(driver.find_element_by_name('dataFormatComboBox'))
 format.select_by_value('CSV')
 
-# select start and end dates
+select start and end dates
 dates = Select(driver.find_element_by_class_name('gwt-ListBox'))
 i = 0
 for date in dates:
@@ -31,5 +38,5 @@ for date in dates:
 		dates.select_by_value('Sep')
 	i = i + 1
 
-button = driver.find_element_by_xpath('//button[@type="button"]')
-button.click()
+# button = driver.find_element_by_xpath('//button[@type="button"]')
+# button.click()
